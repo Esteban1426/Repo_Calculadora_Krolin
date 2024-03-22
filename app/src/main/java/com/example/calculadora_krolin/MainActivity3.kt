@@ -11,9 +11,9 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity3 : AppCompatActivity() {
 
-    private lateinit var numeroUsuario: EditText
-    private lateinit var botonCalcular: Button
-    private lateinit var listaFibonacci: TextView
+    lateinit var numeroUsuario: EditText
+    lateinit var botonCalcular: Button
+    lateinit var listaFibonacci: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +28,7 @@ class MainActivity3 : AppCompatActivity() {
         }
     }
 
-    private fun mostrarAlerta(titulo: String, mensaje: String) {
+    fun mostrarAlerta(titulo: String, mensaje: String) {
         val estructura = AlertDialog.Builder(this)
         estructura.setTitle(titulo)
             .setMessage(mensaje)

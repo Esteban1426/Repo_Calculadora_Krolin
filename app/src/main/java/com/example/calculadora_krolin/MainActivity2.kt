@@ -10,8 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity2 : AppCompatActivity() {
 
-    private lateinit var numero: TextView
-    private lateinit var resultado: TextView
+    lateinit var numero: TextView
+    lateinit var resultado: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,8 +25,7 @@ class MainActivity2 : AppCompatActivity() {
             calcularFactorial()
         }
     }
-
-    private fun mostrarAlerta(titulo: String, mensaje: String) {
+    fun mostrarAlerta(titulo: String, mensaje: String) {
         val estructura = AlertDialog.Builder(this)
         estructura.setTitle(titulo)
             .setMessage(mensaje)
@@ -36,7 +35,7 @@ class MainActivity2 : AppCompatActivity() {
         alert.show()
     }
 
-    private fun calcularFactorial() {
+    fun calcularFactorial() {
         val input = numero.text.toString()
 
         if (input.isEmpty()) {
@@ -53,7 +52,7 @@ class MainActivity2 : AppCompatActivity() {
         }
     }
 
-    private fun calcularFactorial(n: Int): Long {
+    fun calcularFactorial(n: Int): Long {
         return if (n < 0) {
             -1
         } else if (n == 0 || n == 1) {

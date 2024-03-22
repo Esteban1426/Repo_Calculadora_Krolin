@@ -1,19 +1,18 @@
 package com.example.calculadora_krolin
 
-import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var mensaje: TextView
-    private lateinit var v1: EditText
-    private lateinit var v2: EditText
+    lateinit var mensaje: TextView
+    lateinit var v1: EditText
+    lateinit var v2: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
